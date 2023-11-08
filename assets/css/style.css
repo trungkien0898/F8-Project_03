@@ -47,7 +47,7 @@ a {
     cursor: pointer;
 }
 
-.section__heading {
+.section-heading {
     color: var(--main-color);
     margin-bottom: 18px;
     font-size: 5rem;
@@ -56,11 +56,41 @@ a {
     letter-spacing: -1px;
 }
 
-.section__desc {
+.section-desc {
     color: #575f66;
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.66;
+}
+
+.cta-more-info {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.cta-more-info__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #575f66;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #575f66;
+    transition: 0.25s;
+}
+
+.cta-more-info__arrow-right {
+    rotate: 180deg;
+}
+
+.cta-more-info__area:hover {
+    color: #fff;
+    border-color: #2e80ce;
+    background: #2e80ce;
+    cursor: pointer;
 }
 
 /* =============Header============= */
@@ -76,6 +106,9 @@ a {
 /* =============Header-top============= */
 .header-top {
     display: flex;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
     justify-content: space-between;
     align-items: center;
 }
@@ -235,7 +268,8 @@ a {
 
 /* =============Service============= */
 .service {
-    padding: 170px;
+    margin: 85px 0;
+    padding: 85px 0;
 }
 
 .service__heading,
@@ -270,6 +304,7 @@ a {
 .service-item {
     display: flex;
     padding: 21px 18px 20px 22px;
+    transition: 0.25s;
 }
 
 .service-item:hover {
@@ -295,6 +330,7 @@ a {
     height: 60px;
     border-radius: 50%;
     margin-right: 19px;
+    transition: 0.25s;
 }
 
 .service-item__heading {
@@ -311,4 +347,154 @@ a {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.75;
+}
+
+/* =============Work============= */
+.work {
+    padding: 100px 0;
+    background: #f6fbff;
+}
+
+.work__desc {
+    width: 468px;
+    margin-bottom: 70px;
+}
+
+.work__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.work-item {
+    padding: 42px;
+    border: 16px solid #eaf6ff;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+
+.work-item:hover {
+    border-color: #2e80ce;
+    transform: translateY(-16px);
+}
+
+.work-item:hover .more-infor {
+    color: #2e80ce;
+    text-decoration: underline solid #2e80ce;
+}
+
+.work-item__title {
+    color: var(--main-color);
+    margin: 18px 0 28px 0;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.work-item__desc {
+    color: #575f66;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+/* =============Feature============= */
+
+.feature {
+    margin: 85px 0;
+    padding: 85px 0;
+}
+
+.feature__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature__images {
+    display: flex;
+    position: relative;
+    padding: 0 58px 121px 0;
+    width: 48%;
+}
+
+.feature__img {
+    width: 512px;
+    height: 370px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.feature__img:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 332px;
+}
+
+.feature__text {
+    width: 468px;
+}
+
+.feature__btn {
+    margin-top: 38px;
+}
+
+/* =============Member============= */
+
+.member-top {
+    text-align: center;
+}
+
+.member__heading {
+    margin-bottom: 38px;
+}
+
+.member__list {
+    display: grid;
+    text-align: center;
+    margin-top: 70px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.member-item:hover .member-item__img {
+    transform: scale(1.1);
+}
+
+.member-item__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 270px;
+    height: 318px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    background: #eaf6ff;
+    overflow: hidden;
+}
+
+.member-item__img {
+    position: absolute;
+    bottom: 0;
+    width: 262px;
+    height: 290px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.member-item__name {
+    color: var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.member-item__info {
+    color: #575f66;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.86; /* 185.714% */
 }
